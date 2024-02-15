@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -12,7 +13,7 @@ function Navbar() {
       </div>
       <div className="navLinks">
         {["Home", "Movies"].map((element, index) => {
-          return <a id={index} href="#">{element}</a>;
+          return <Link id={index}  to="/deflix.react/home">{element}</Link>;
         })}
       </div>
       <div className="logBtns">

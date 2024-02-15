@@ -1,6 +1,7 @@
-import MainSlider from "../MainSlider/MainSlider";
+
 import Contents from "../Contents/Contents";
 import "./Home.css"
+import ResponsiveCarousel from "../ResponsiveCarousel/ResponsiveCarousel";
 
 function Home() {
 
@@ -9,7 +10,7 @@ function Home() {
     <>
       <main>
         <div id="main" >
-          <MainSlider />
+          <ResponsiveCarousel/>
           <Contents/>
         </div>
       </main>
