@@ -12,14 +12,14 @@ function Navbar() {
       </div>
       <div className="navLinks">
         {["Home", "Movies"].map((element, index) => {
-          return <a id={index} href="#" >{element}</a>;
+          return <a id={index} href="#">{element}</a>;
         })}
       </div>
       <div className="logBtns">
-        <a className="btn btn-signUp" href="#">
+        <a key="0" className="btn btn-signUp" href="#">
           Sign Up
         </a>
-        <a className="btn btn-signIn" href="#">
+        <a key="1" className="btn btn-signIn" href="#">
           Sign In
         </a>
       </div>

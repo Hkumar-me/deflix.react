@@ -2,8 +2,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: .7vw;
-    padding: .7vw 1vw;
+    padding: 1vw 4vw;
     width: 100%;
 }
 .nlogo img{

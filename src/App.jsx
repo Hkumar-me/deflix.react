@@ -1,23 +1,20 @@
-import Navbar from "./components/Navbar/Navbar";
 import React, { useState } from "react";
-import MainSlider from "./components/MainSlider/MainSlider";
-import Contents from "./components/Contents/Contents";
 import "./App.css";
-import Footer from "./components/Footer/Footer";
+import Layout from "./Layout";
+import Home from "./components/Home/Home";
+import MovieInfo from "./components/MovieInfoPage/MovieInfo";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-
-
+  let title = "dewaar"
   return (
     <>
-      <main>
-        <div id="main" >
-          <Navbar />
-          <MainSlider />
-          <Contents/>
-        </div>
-          <Footer />
-      </main>
+      <Routes>
+        <Route path="/deflix.react/home" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="movie/:id" element={<MovieInfo />} />
+        </Route>
+      </Routes>
     </>
   );
 }

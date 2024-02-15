@@ -14,16 +14,16 @@ function Footer() {
           <div className="companyLinks">
             <h2>Company</h2>
             {["About Us", "Privacy Policy", "Terms & Conditions"].map(
-              (element) => {
-                return <a href="#">{element}</a>;
+              (element, index) => {
+                return <a key={index} href="#">{element}</a>;
               }
             )}
           </div>
           <div className="quickLinks">
             <h2>Quick Links</h2>
             {["Careers", "Advertise", "Community"].map(
-              (element) => {
-                return <a href="#">{element}</a>;
+              (element, index ) => {
+                return <a key={index} href="#">{element}</a>;
               }
             )}
           </div>

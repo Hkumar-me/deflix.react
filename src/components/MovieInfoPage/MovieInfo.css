@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.movie-info{
+    padding: 0 4vw;
+}
+.topInfo{
+    width: 100%;
+    height: 60vh;
+    background-color: red;
+}
+.topInfo .poster{
+    width: 200px;
+    height: 200px;
+}
+.topInfo .poster img{
+    width: 50vh;
+}
