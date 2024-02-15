@@ -1,20 +1,155 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.movie-info{
-    padding: 0 4vw;
+.movie-info {
+  padding: 0 4vw;
 }
-.topInfo{
+.topInfo {
+  margin-bottom: 3vw;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  gap: 2vw;
+}
+.topInfo .poster {
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position:relative;
+}
+.topInfo .poster .img-container{
+  width: 100%;
+  height:80%;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+}
+.topInfo .poster img {
+  width: 100%;
+  height:100%;
+  border-radius: 30px;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+}
+
+.topInfo .poster .img-container .posterOverlayInfo{
+    position: absolute; 
     width: 100%;
-    height: 60vh;
-    background-color: red;
+    height:100%;
+    background-color: rgba(15, 15, 15, 0.368);
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
 }
-.topInfo .poster{
-    width: 200px;
-    height: 200px;
+.topInfo .poster .img-container .posterOverlayInfo h1{
+    font-size: 3vw;
 }
-.topInfo .poster img{
-    width: 50vh;
+.reviews {
+padding: 1vw;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.reviews h1{
+    font-size: 1.5vw;
+    font-weight: 900;
+}
+.reviewDiv {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  gap: .7vw;
+  background-color: rgb(54, 60, 60);
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #151212a2;
+}
+.reviewDiv .userPhoto {
+  width: 25%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #302f2fc5;
+}
+.reviewDiv .userPhoto img {
+  width: 70%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 50%;
+  object-position: center;
+  cursor: pointer;
+}
+.userInfo {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.userInfo a{
+    height: 12%;
+    cursor: pointer;
+    color: rgba(225, 239, 251, 0.664);
+}
+.userInfo p{
+    height: 75%;
+    font-size: 14px;
+    color: rgba(240, 248, 255, 0.936);
+
+}
+.posterBtns{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.btn{
+    width: fit-content;
+    height: 3vw;
+    background-color: #FE5B4A;
+    border-radius: 50px;
+    padding: 1.7vw 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1 ease-in-out;
+}
+.addBtn{
+    background-color: #302F2F;
+    color: #FE5B4A;
+    border: 1px solid #FE5B4A;
+}
+.btn:hover{
+    transform: scale(1.1);
+}
+.descrpition{
+    width: 100%;
+    padding: .5vw 1vw;
+    margin-bottom: 3vw;
+}
+.descrpition h1{
+    font-size: 1.8vw;
+    font-weight: 900;
+    margin-bottom: 1vw;
+}
+.descrpition p{
+    text-align: justify;
+    font-size: 1.1vw;
 }

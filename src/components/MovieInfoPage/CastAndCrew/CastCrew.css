@@ -1,0 +1,38 @@
+.cast-crew{
+    width: 100%;
+    margin-bottom: 3vw;
+}
+.cast-crew h1{
+    font-size: 1.5vw;
+    font-weight: 900;
+    margin-bottom: 1.5vw;
+}
+.castList{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.castList .cast{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.castList .cast img{
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.castList .cast .castInfo h2{
+    font-size: 1.3vw;
+    font-weight: 500;
+    color: rgb(225, 239, 251);
+}
+.castList .cast .castInfo h3{
+    font-size: 1vw;
+    font-weight: 300;
+    color: rgba(225, 239, 251, 0.664);
+}
