@@ -1,0 +1,60 @@
+footer {
+  width: 100%;
+  height: 40vh;
+  background-color: #171717;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.footer {
+  padding: 1vw;
+  width: 80%;
+  height: 100%;
+  margin: 0 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10vw;
+}
+.links {
+  display: flex;
+  align-items: flex-start;
+  gap: 3vw;
+}
+.links .companyLinks,
+.quickLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+}
+.links a {
+  color: #5d5d5d;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+.links img{
+    width: 7vw;
+}
+.contact input{
+    width: 100%;
+    height: 40px;
+    border-radius: 50px;
+    padding: 15px;
+    color:#5d5d5d;
+}
+.contact .socialLinks {
+  display: flex;
+  gap: 1vw;
+}
+.contact .socialLinks i {
+  width: fit-content;
+  background-color: #5d5d5d;
+  padding: 0.8vw;
+  border-radius: 10px;
+  font-size: 1.3vw;
+  cursor: pointer;
+}

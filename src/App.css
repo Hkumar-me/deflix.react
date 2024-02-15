@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+}
+
+html, body{
+    width: 100%;
+    min-height: 50vh;
+}
+body{
+    background-color: #302F2F;
+    /* background-color: #fff; */
+}
+main{
+    width: 100%;
+}
+#main{
+    padding: 0 4vw;
+}
