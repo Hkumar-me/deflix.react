@@ -2,14 +2,17 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1vw 4vw;
-    width: 100%;
+    padding: 10px 20px;
     background-color: #171717;
+    overflow: hidden;
+}
+.nlogo{
+    width: 80px;
 }
 .nlogo img{
     cursor: pointer;
     padding-bottom: 5px;
-    width: 7vw;
+    width: 100%;
 }
 .search input{
     width: 40vw;
@@ -35,11 +38,12 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 7vw;
-    padding: .8vw .5vw;
+    width: fit-content;
+    padding: 15px 15px;
     border-radius: 50px;
     background-color:#FE5B4A ;
     cursor: pointer;
+    text-wrap: nowrap;
 
 }
 .logBtns .btn-signIn{
@@ -50,4 +54,15 @@ nav{
 .toggle{
     color: #FE5B4A;
     cursor: pointer;
+}
+
+
+
+@media (max-width: 500px) {
+    nav{
+    padding: 10px 20px;
+}
+.nlogo img{
+    width: 40px;
+}
 }

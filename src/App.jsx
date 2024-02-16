@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./App.css";
 import Layout from "./Layout";
-import Home from "./components/Home/Home";
-import MovieInfo from "./components/MovieInfoPage/MovieInfo";
+import Home from "./components/Home/Home"
+import MovieInfo from "./components/MovieInfoPage/MovieInfo/MovieInfo";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/deflix.react/home" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="movie/:id" element={<MovieInfo />} />
+          <Route path="movies/:id" element={<MovieInfo />} />
         </Route>
       </Routes>
     </>

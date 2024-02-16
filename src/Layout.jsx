@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 import Footer from "./components/Footer/Footer";
 const Layout = () => {
   return (
-    <div className='w-full'>
+    <div>
       <Navbar />
       <main>
         <Outlet />

@@ -15,7 +15,7 @@
 }
 .cards .card{
     width: 20vw;
-    min-height: 60vh;
+    height: 60vh;
     background-color: #1E1E1E;
     border-top-right-radius: 40px;
     border-bottom-left-radius: 40px;

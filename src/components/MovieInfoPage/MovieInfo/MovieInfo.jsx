@@ -1,6 +1,7 @@
 import React from "react";
 import "./MovieInfo.css";
-import CastCrew from "./CastAndCrew/CastCrew";
+import CastCrew from "../CastAndCrew/CastCrew";
+import { Link } from "react-router-dom";
 
 function MovieInfo() {
   let userReviews = [
@@ -124,6 +125,7 @@ function MovieInfo() {
           <div className="cards">
             {element.list.map((element) => {
               return (
+                <Link to={`/deflix.react/home/movies/${element.name}`} onClick={scrollToTop}>
                 <div className="card">
                   <img src={`${element.poster}`} alt="" />
                   <div className="info">
@@ -131,6 +133,7 @@ function MovieInfo() {
                     <h4>{element.rating} / 10</h4>
                   </div>
                 </div>
+                </Link>
               );
             })}
           </div>
@@ -142,5 +145,10 @@ function MovieInfo() {
     </>
   );
 }
-
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'instant'
+  })
+}
 export default MovieInfo;

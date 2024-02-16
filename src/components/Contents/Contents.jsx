@@ -1,5 +1,6 @@
 import React from "react";
 import "./Contents.css";
+import { Link } from "react-router-dom";
 
 function Contents() {
   let sections = [
@@ -85,11 +86,13 @@ function Contents() {
       {sections.map((element, index) => {
         return index === 1 ? (
           <div>
+            
             <div className="section">
+           
               <h2>{element.section_name}</h2>
               <div className="cards">
                 {element.list.map((element) => {
-                  return (
+                  return ( <Link to={`/deflix.react/home/movies/${element.name}`} onClick={scrollToTop}>
                     <div className="card">
                       <img src={`images/${element.poster}`} alt="" />
                       <div className="info">
@@ -97,7 +100,7 @@ function Contents() {
                         <h4>{element.rating} / 10</h4>
                       </div>
                     </div>
-                  );
+                    </Link> );
                 })}
               </div>
             </div>
@@ -120,11 +123,13 @@ function Contents() {
             </div>
           </div>
         ) : (
+          
           <div className="section">
             <h2>{element.section_name}</h2>
             <div className="cards">
               {element.list.map((element) => {
                 return (
+                <Link to={`/deflix.react/home/movies/${element.name}` } onClick={scrollToTop}>
                   <div className="card">
                     <img src={`images/${element.poster}`} alt="" />
                     <div className="info">
@@ -132,6 +137,7 @@ function Contents() {
                       <h4>{element.rating} / 10</h4>
                     </div>
                   </div>
+                  </Link>
                 );
               })}
             </div>
@@ -141,5 +147,10 @@ function Contents() {
     </div>
   );
 }
-
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'instant'
+  })
+}
 export default Contents;

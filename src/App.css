@@ -14,5 +14,17 @@ body{
     /* background-color: #fff; */
 }
 #main{
-    padding: 0 4vw;
+    width: 100%;
+    padding: 0 30px;
+}
+
+
+
+
+@media (max-width: 500px) {
+    #main{
+        padding:10px;
+        width: 100vw;
+    }
+
 }
