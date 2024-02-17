@@ -97,7 +97,7 @@ export default function ResponsiveCarousel(props) {
               <StackedCarousel
                 ref={carouselRef}
                 slideComponent={Card}
-                slideWidth={parentWidth < 800 ? parentWidth - 40 : 750}
+                slideWidth={parentWidth < 600 ? parentWidth - 40 : 750}
                 carouselWidth={parentWidth}
                 data={data}
                 currentVisibleSlide={currentVisibleSlide}
@@ -105,7 +105,6 @@ export default function ResponsiveCarousel(props) {
                 useGrabCursor
                 className="StackedCarousel"
               >
-                
               </StackedCarousel>
               <div className="fabs">
                   <Fab
