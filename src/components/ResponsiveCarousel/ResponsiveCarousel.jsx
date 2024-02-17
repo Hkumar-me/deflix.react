@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   StackedCarousel,
@@ -7,7 +7,8 @@ import {
 import Fab from "@mui/material/Fab";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import "./ResponsiveCarousel.css";
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import "./ResponsiveCarousel.css";
 
 export const data = [
   {
@@ -84,14 +85,7 @@ export const data = [
 export default function ResponsiveCarousel(props) {
   const ref = React.useRef();
   return (
-    <div
-      style={{
-        width: "100%",
-        height: "50vh",
-        position: "relative",
-        marginTop: "3vw",
-      }}
-    >
+    <div className="carousel-div">
       <ResponsiveContainer
         carouselRef={ref}
         render={(parentWidth, carouselRef) => {
@@ -109,34 +103,37 @@ export default function ResponsiveCarousel(props) {
                 currentVisibleSlide={currentVisibleSlide}
                 maxVisibleSlide={5}
                 useGrabCursor
-              />
+                className="StackedCarousel"
+              >
+                
+              </StackedCarousel>
+              <div className="fabs">
+                  <Fab
+                    className="fab-btn"
+                    size="small"
+                    color="primary"
+                    onClick={(event) => {
+                      event.preventDefault();
+                      ref.current?.goBack();
+                    }}
+                  >
+                    <ArrowBackIcon />
+                  </Fab>
+                  <Fab
+                    className="fab-btn"
+                    size="small"
+                    color="primary"
+                    onClick={() => {
+                      ref.current?.goNext(6);
+                    }}
+                  >
+                    <ArrowForwardIcon />
+                  </Fab>
+                </div>
             </>
           );
         }}
       />
-      <>
-        <Fab
-          style={{ position: "absolute", top: "40%", left: 20, zIndex: 10 }}
-          size="small"
-          color="primary"
-          onClick={(event) => {
-            event.preventDefault();
-            ref.current?.goBack();
-          }}
-        >
-          <ArrowBackIcon />
-        </Fab>
-        <Fab
-          style={{ position: "absolute", top: "40%", right: 20, zIndex: 10 }}
-          size="small"
-          color="primary"
-          onClick={() => {
-            ref.current?.goNext(6);
-          }}
-        >
-          <ArrowForwardIcon />
-        </Fab>
-      </>
     </div>
   );
 }
@@ -152,72 +149,38 @@ export const Card = React.memo(function (props) {
     color: "white",
   });
   return (
-    
     <Link to={`/deflix.react/home/movies/${title}`}>
-    <div
-      style={{
-        width: "100vh",
-        height: "50vh",
-        userSelect: "none",
-        overflow: "hidden",
-        borderRadius: 20,
-        position: "relative"
-      }}
-    >
-      <img
-        style={{
-          height: "100%",
-          width: "100%",
-          objectFit: "cover",
-          borderRadius: 20,
-          position: "relative",
-          overflow: "hidden"
-        }}
-        draggable={false}
-        src={cover}
-      />
-      <div style={myStyle}>
-        <div
-          style={{
-            position: "absolute",
-            color: "white",
-            fontSize: "20px",
-            opacity: 1,
-            zIndex: 555,
-            padding: "20px",
-            bottom: "0%",
-            width:"100%",
-            backgroundColor: "#0000008f",
-            userSelect: "none",
-          }}
-        >
-          <h1
-            style={{
-              fontSize: "20px",
-              fontStyle:"italic",
-            }}
-          >
-            {title}
-          </h1>
-          <h2
-            style={{
-              fontSize: "16px",
-              opacity:"0.7"
-            }}
-          >
-            {duration}
-          </h2>
-          <p
-            style={{
-              fontSize: "13px",
-              opacity:"0.7"
-            }}
-          >
-            {description}
-          </p>
+      <div className="carousel-img-div">
+        <img draggable={false} src={cover} className="carousel-img" />
+        <div style={myStyle}>
+          <div className="carousel-img-overlay">
+            <h1
+              style={{
+                fontSize: "20px",
+                fontStyle: "italic",
+              }}
+            >
+              {title}
+            </h1>
+            <h2
+              style={{
+                fontSize: "16px",
+                opacity: "0.7",
+              }}
+            >
+              {duration}
+            </h2>
+            <p
+              style={{
+                fontSize: "13px",
+                opacity: "0.7",
+              }}
+            >
+              {description}
+            </p>
+          </div>
         </div>
       </div>
-    </div>
     </Link>
   );
 });

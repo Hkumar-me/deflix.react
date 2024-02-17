@@ -4,7 +4,7 @@
     margin-top: 100px;
 }
 .section h2{
-    font-size: 1.5vw;
+    font-size: 24px;
     margin-bottom: 20px;
     margin-top: 20px;
 }
@@ -65,4 +65,41 @@
     height: 50px;
     font-size: 1.3vw;
     background-color: #434343;
+}
+
+
+@media (max-width:600px) {
+    .section h2{
+        font-size: 20px;
+    }
+    .cards{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 5vw;
+        gap: 30px;
+    }
+    .cards .card{
+        width: 40vw;
+        height: 60vh;
+        overflow: hidden;
+    }
+    .genres h1{
+        font-size: 20px;
+    }
+    .genre{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+    }
+    .genre a{
+        display: flex;
+        border-radius: 50px;
+        padding: 10px 20px;
+        width: fit-content;
+        height: 50px;
+        font-size: 13px;
+        background-color: #434343;
+    }
 }

@@ -23,8 +23,8 @@ body{
 
 @media (max-width: 500px) {
     #main{
-        padding:10px;
-        width: 100vw;
+        padding:0px;
+        width: 100%;
     }
 
 }

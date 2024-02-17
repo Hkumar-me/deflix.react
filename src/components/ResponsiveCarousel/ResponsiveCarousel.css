@@ -1,0 +1,98 @@
+
+.carousel-img-overlay {
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    opacity: 1;
+    z-index: 555;
+    padding: 20px;
+    bottom: 0%;
+    width: 100%;
+    background-color: #0000008f;
+    user-select: none;
+  }
+  
+  .carousel-img {
+    height: 100%;
+    width: 100vw;
+    object-fit: cover;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .carousel-img-div {
+    width: 100%;
+    height: 50vh;
+    user-select: none;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+  }
+  
+  .carousel-div {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    margin-top: 3vw;
+  }
+  
+  .fabs{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0%;
+    z-index: 999;
+
+  }
+  .fab-btn {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    background-color: tomato;
+  }
+
+@media (max-width:600px) {
+   
+    .carousel-div{
+        width: 100vw;
+        height: 37vh;
+        position: relative;
+    }
+    .carousel-img-div{
+        width: 80vw;
+        margin-top: 25px;
+        height: 37vh ;
+        user-select: none ;
+        overflow: hidden;
+        border-radius: 20px;
+        position:relative ;
+        left: 7%;
+    }
+    .carousel-img{
+        width: 100%;
+        height: 100%;
+    }
+    .carousel-img-overlay {
+        font-size: 16px;
+        opacity: 1;
+        z-index: 555;
+        padding: 10px;
+        bottom: 0%;
+        width: 100%;
+        background-color: #0000008f;
+        user-select: none;
+      }
+      .fabs{
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        top: 10%;
+        z-index: 999;
+      }
+}
