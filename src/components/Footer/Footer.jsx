@@ -15,7 +15,7 @@ function Footer() {
             <h2>Company</h2>
             {["About Us", "Privacy Policy", "Terms & Conditions"].map(
               (element, index) => {
-                return <a key={index} href="#">{element}</a>;
+                return <a key={index} href="#" className="link-hover-effects">{element}</a>;
               }
             )}
           </div>
@@ -23,7 +23,7 @@ function Footer() {
             <h2>Quick Links</h2>
             {["Careers", "Advertise", "Community"].map(
               (element, index ) => {
-                return <a key={index} href="#">{element}</a>;
+                return <a key={index} href="#" className="link-hover-effects">{element}</a>;
               }
             )}
           </div>

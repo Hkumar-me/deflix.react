@@ -2,8 +2,17 @@ import React from "react";
 import "./MovieInfo.css";
 import CastCrew from "../CastAndCrew/CastCrew";
 import { Link } from "react-router-dom";
+import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import Description from "./Description";
+import Button from '../../Buttons/Button';
 
 function MovieInfo() {
+
+  
+
+
   let userReviews = [
     {
       name: "User name",
@@ -33,6 +42,27 @@ function MovieInfo() {
       review:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae sapiente numquam quas optio fugit error quaerat autem temporibus velit dicta.",
     },
+    {
+      name: "User name",
+      photo:
+        "https://images.unsplash.com/photo-1514069419621-1adbe445edf1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      review:
+        "Lorem ipsumt dicta.",
+    },
+    {
+      name: "User name",
+      photo:
+        "https://images.unsplash.com/photo-1514069419621-1adbe445edf1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      review:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae sapiente numquam quas optio fugit error quaerat autem temporibus velit dicta.",
+    },
+    {
+      name: "User name",
+      photo:
+        "https://images.unsplash.com/photo-1514069419621-1adbe445edf1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      review:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae sapienteLorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae sapiente numquam quas optio fugt error quaera numquam quas optio fugt error quaerat autem temporibus velit dicta.",
+    },
   ];
 
 
@@ -44,6 +74,36 @@ function MovieInfo() {
           name: "Godzilla",
           rating: 8,
           poster: "https://images.unsplash.com/photo-1616530940355-351fabd9524b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+          name: "Batman",
+          rating: 7,
+          poster: "https://images.unsplash.com/photo-1590682620381-08165da96779?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+          name: "Enola Holmes",
+          rating: 8,
+          poster: "https://images.unsplash.com/photo-1601925662822-510b76665bd9?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+          name: "Intersteller",
+          rating: 9,
+          poster: "https://images.unsplash.com/photo-1628126235206-5260b9ea6441?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+          name: "Batman",
+          rating: 7,
+          poster: "https://images.unsplash.com/photo-1590682620381-08165da96779?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+          name: "Enola Holmes",
+          rating: 8,
+          poster: "https://images.unsplash.com/photo-1601925662822-510b76665bd9?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+          name: "Intersteller",
+          rating: 9,
+          poster: "https://images.unsplash.com/photo-1628126235206-5260b9ea6441?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         },
         {
           name: "Batman",
@@ -88,15 +148,17 @@ function MovieInfo() {
             />
             </div>
             <div className="posterBtns">
-              <button className="rateBtn btn">Rate Now</button>
-              <button className="addBtn btn">Add to Watchlist</button>
+             <Button value="Rate Now"/>
+             <Button value="Add to Watchlist"/>
             </div>
           </div>
           <div className="reviews">
-            <h1>Reviews</h1>
+            <h1 className="underline-effects">Reviews</h1>
+            
+            <div className="reviews-container">
             {userReviews.map((element) => {
               return (
-                <div className="reviewDiv">
+                  <div className="reviewDiv">
                   <div className="userPhoto">
                     <img src={element.photo} alt="userphoto" />
                   </div>
@@ -107,37 +169,58 @@ function MovieInfo() {
                 </div>
               );
             })}
+            
+            </div>
           </div>
         </div>
         <div className="descrpition">
-          <h1>Description</h1>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, in recusandae magnam porro, omnis quos voluptatibus explicabo veritatis accusamus iste expedita possimus sequi doloribus qui necessitatibus quia quidem repudiandae deserunt quam deleniti inventore distinctio, libero debitis. Ducimus et quos necessitatibus ratione odit consequatur temporibus, perferendis ab, fugiat quod maxime dolor Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam quam sapiente neque architecto fuga ullam cumque fugit magnam dolorum libero porro, voluptas ex esse repellendus tenetur sit iure! Itaque, facere!lorem40
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis excepturi sint, cupiditate laborum eos aut libero molestiae quibusdam aliquam eaque id ut quae laudantium cum dolorum nostrum voluptas veniam at alias deleniti minus, aliquid nemo quo! Exercitationem quibusdam architecto a Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quis deleniti veritatis placeat tempora, a eius suscipit cumque aliquam itaque, nisi iure doloremque maiores sunt sapiente culpa quasi corporis quod nulla! Deleniti dolor, illo aspernatur debitis, nobis harum voluptatum magnam voluptates molestiae nostrum cupiditate magni eaque porro recusandae, ex beatae?sum, dolor sit amet consectetur adipisicing elit. Eligendi, in recusandae magnam porro, omnis quos voluptatibus explicabo veritatis accusamus iste expedita possimus sequi doloribus qui necessitatibus quia quidem repudiandae deserunt quam deleniti inventore distinctio, libero debitis. Ducimus et quos necessitatibus ratione odit consequatur temporibus, perferendis ab, fugiat quod maxime dolor Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam quam sapiente neque architecto fuga ullam cumque fugit magnam dolorum libero porro, voluptas ex esse repellendus tenetur sit iure! Itaque, facere!lorem40
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis excepturi sint, cupiditate laborum eos aut libero molestiae quibusdam aliquam eaque id ut quae laudantium cum dolorum nostrum voluptas veniam at alias deleniti minus, aliquid nemo quo! Exercitationem quibusdam architecto a Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quis deleniti veritatis placeat tempora, a eius suscipit cumque aliquam itaque, nisi iure doloremque maiores sunt sapiente culpa quasi corporis quod nulla! Deleniti dolor, illo aspernatur debitis, nobis harum voluptatum magnam voluptates molestiae nostrum cupiditate magni eaque porro recusandae, ex beatae.
-          </p>
+          <Description />
         </div>
         <CastCrew />
         <div className="relatedMovies">
        {relatedMovies.map((element, index)=>{
         return (
-          <div className="section">
-          <h2>{element.section_name}</h2>
-          <div className="cards">
-            {element.list.map((element) => {
-              return (
-                <Link to={`/deflix.react/home/movies/${element.name}`} onClick={scrollToTop}>
-                <div className="card">
-                  <img src={`${element.poster}`} alt="" />
-                  <div className="info">
-                    <h3>{element.name}</h3>
-                    <h4>{element.rating} / 10</h4>
-                  </div>
-                </div>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
+          <div>
+          <h1 className="section_name underline-effects">{element.section_name}</h1>
+            <Swiper
+              modules={[Navigation]}
+              slidesPerView={6}
+              spaceBetween={0}
+              
+              breakpoints={{
+                "@0.00": {
+                  slidesPerView: 2, // Set the number of slides per view for screen width less than 600px
+                },
+                "@0.75": {
+                  slidesPerView: 4, // Set the number of slides per view for screen width between 600px and 750px
+                },
+                "@1.00": {
+                  slidesPerView: 6, // Set the number of slides per view for screen width between 750px and 1000px
+                },
+                // Add more breakpoints as needed
+              }}
+              className="mySwiper"
+            >
+              {element.list.map((element) => {
+                return (
+                    <SwiperSlide slideClass="swiper-slide">
+                    <Link
+                      to={`/deflix.react/home/movies/${element.name}`}
+                      onClick={scrollToTop}
+                    >
+                      <div className="swiper-slide-content">
+                        <img src={`${element.poster}`} alt="" />
+                        <div className="info">
+                          <h3 >{element.name}</h3>
+                          <h4>{element.rating} / 10</h4>
+                        </div>
+                      </div>
+                  </Link>
+                    </SwiperSlide>
+                );
+              })}
+            </Swiper>
+            </div>
         )
        })}
         </div>

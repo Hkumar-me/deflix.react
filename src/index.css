@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.link-hover-effects{
+    position: relative;
+    width: fit-content;
+}
+.link-hover-effects::before {
+  content: "";
+  top: 100%;
+  position: absolute;
+  width: 0%;
+  height: 4px;
+  border-top: 1px solid #d3d3d3;
+  transition: all ease-in .3s;
+}
+.link-hover-effects::after {
+  content: "";
+  top: 100%;
+  left: 0;
+  position: absolute;
+  width: 0%;
+  height: 4px;
+  border-bottom: 1px solid #d3d3d3;
+  transition: all ease-in .3s;
+}
+.link-hover-effects:hover::before{
+    width: 70%;
+}
+.link-hover-effects:hover::after{
+    width: 100%;
+}

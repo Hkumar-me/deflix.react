@@ -37,7 +37,7 @@ function CastCrew() {
 
   return (
     <div className="cast-crew">
-      <h1>Cast and Crew</h1>
+      <h1 className="underline-effects">Cast and Crew</h1>
       <div className="castList">
         {castMembers.map((element, index) => {
           return (

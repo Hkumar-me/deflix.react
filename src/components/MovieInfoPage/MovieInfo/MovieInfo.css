@@ -5,6 +5,8 @@
 }
 .movie-info {
   padding: 0 4vw;
+  width: 100%;
+  height: 100%;
 }
 .topInfo {
   margin-bottom: 3vw;
@@ -21,55 +23,84 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  position:relative;
+  position: relative;
 }
-.topInfo .poster .img-container{
+.topInfo .poster .img-container {
   width: 100%;
-  height:80%;
+  height: 80%;
   border-radius: 30px;
   overflow: hidden;
   position: relative;
 }
 .topInfo .poster img {
   width: 100%;
-  height:100%;
+  height: 100%;
   border-radius: 30px;
   object-fit: cover;
   object-position: center;
   overflow: hidden;
 }
 
-.topInfo .poster .img-container .posterOverlayInfo{
-    position: absolute; 
-    width: 100%;
-    height:100%;
-    background-color: rgba(15, 15, 15, 0.368);
-    padding: 2vw;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly;
+.topInfo .poster .img-container .posterOverlayInfo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 15, 15, 0.368);
+  padding: 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
-.topInfo .poster .img-container .posterOverlayInfo h1{
-    font-size: 3vw;
+.topInfo .poster .img-container .posterOverlayInfo h1 {
+  color: #f1ebebf9;
+  font-size: 50px;
+  font-style: italic;
+}
+.topInfo .poster .img-container .posterOverlayInfo .releaseYear {
+  color: #f1ebeb;
+  font-style: italic;
+}
+.topInfo .poster .img-container .posterOverlayInfo .genres {
+  color: #f1ebeb;
+  font-style: italic;
+}
+.topInfo .poster .img-container .posterOverlayInfo p {
+  color: #f1ebebcf;
+  text-align: justify;
+  font-style: italic;
+}
+.reviews-container {
+  padding: 1vw;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  overflow: scroll;
+}
+.reviews-container::-webkit-scrollbar{
+  display: none;
 }
 .reviews {
-padding: 1vw;
+  padding: 1vw;
   width: 40%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex-shrink: 0;
 }
-.reviews h1{
-    font-size: 1.5vw;
-    font-weight: 900;
+.reviews h1 {
+  font-size: 1.5vw;
+  font-weight: 900;
 }
 .reviewDiv {
   width: 100%;
-  height: 20%;
+  height: 25%;
   display: flex;
-  gap: .7vw;
+  gap: 0.7vw;
   background-color: rgb(54, 60, 60);
   justify-content: space-between;
   align-items: center;
@@ -79,6 +110,7 @@ padding: 1vw;
   border-bottom-right-radius: 10px;
   overflow: hidden;
   border: 1px solid #151212a2;
+  flex-shrink: 0;
 }
 .reviewDiv .userPhoto {
   width: 25%;
@@ -104,52 +136,185 @@ padding: 1vw;
   flex-direction: column;
   justify-content: space-between;
 }
-.userInfo a{
+.userInfo a {
+  height: 12%;
+  cursor: pointer;
+  color: rgba(225, 239, 251, 0.664);
+}
+.userInfo p {
+  height: 75%;
+  font-size: 14px;
+  color: rgba(240, 248, 255, 0.936);
+  overflow: scroll;
+}
+.userInfo p::-webkit-scrollbar{
+  display: none;
+}
+.posterBtns {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.rbtn {
+  width: fit-content;
+  height: 3vw;
+  background-color: #fe5b4a;
+  border-radius: 50px;
+  padding: 1.7vw 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1 ease-in-out;
+}
+.addBtn {
+  background-color: #302f2f;
+  color: #fe5b4a;
+  border: 1px solid #fe5b4a;
+}
+.descrpition {
+  width: 100%;
+  padding: 0.5vw 1vw;
+  margin-bottom: 3vw;
+}
+.descrpition h1 {
+  font-size: 1.8vw;
+  font-weight: 900;
+  margin-bottom: 1vw;
+  position: relative;
+  width:fit-content ;
+}
+.descrpition p {
+  text-align: justify;
+  font-size: 1.1vw;
+}
+
+@media (max-width: 600px) {
+  .topInfo {
+    margin-bottom: 30px;
+    margin-top: 10px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden;
+  }
+  .topInfo .poster {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+  }
+  .topInfo .poster .img-container {
+    width: 100%;
+    height: 70%;
+    border-radius: 15px;
+  }
+  .topInfo .poster img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+  }
+
+  .topInfo .poster .img-container .posterOverlayInfo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 15, 15, 0.527);
+    padding: 4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+  .topInfo .poster .img-container .posterOverlayInfo h1 {
+    color: #f1ebebf9;
+    font-size: 30px;
+    font-style: italic;
+  }
+  .topInfo .poster .img-container .posterOverlayInfo .releaseYear {
+    color: #f1ebeb;
+    font-style: italic;
+  }
+  .topInfo .poster .img-container .posterOverlayInfo .genres {
+    color: #f1ebeb;
+    font-style: italic;
+  }
+  .topInfo .poster .img-container .posterOverlayInfo p {
+    color: #f1ebebcf;
+    text-align: justify;
+    font-style: italic;
+  }
+  .rbtn {
+    width: fit-content;
+    height: 4vh;
+    padding: 2.4vh;
+  }
+  .addBtn {
+    background-color: #302f2f;
+    color: #fe5b4a;
+    border: 1px solid #fe5b4a;
+  }
+  .reviews {
+    width: 100%;
+    height: 50%;
+  }
+  .reviews-container {
+    padding: 1vw;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    overflow: scroll;
+  }
+  .reviews h1 {
+    font-size: 28px;
+    font-weight: 900;
+  }
+  .reviewDiv {
+    width: 100%;
+    min-height: 30%;
+    display: flex;
+    gap: 0.7vw;
+    flex-shrink: 0;
+  }
+  .reviewDiv .userPhoto {
+    width: 25%;
+    height: 100%;
+  }
+  .reviewDiv .userPhoto img {
+    width: 90%;
+    height: 80%;
+  }
+  .userInfo a {
     height: 12%;
     cursor: pointer;
     color: rgba(225, 239, 251, 0.664);
-}
-.userInfo p{
-    height: 75%;
+  }
+  .userInfo p {
+    min-height: 75%;
     font-size: 14px;
     color: rgba(240, 248, 255, 0.936);
-
-}
-.posterBtns{
+    overflow: scroll;
+  }
+  .descrpition {
     width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-.btn{
-    width: fit-content;
-    height: 3vw;
-    background-color: #FE5B4A;
-    border-radius: 50px;
-    padding: 1.7vw 2vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 1 ease-in-out;
-}
-.addBtn{
-    background-color: #302F2F;
-    color: #FE5B4A;
-    border: 1px solid #FE5B4A;
-}
-.btn:hover{
-    transform: scale(1.1);
-}
-.descrpition{
-    width: 100%;
-    padding: .5vw 1vw;
+    padding: 0.5vw 1vw;
     margin-bottom: 3vw;
-}
-.descrpition h1{
-    font-size: 1.8vw;
+  }
+  .descrpition h1 {
+    font-size: 28px;
     font-weight: 900;
     margin-bottom: 1vw;
-}
-.descrpition p{
+  }
+  .descrpition p {
     text-align: justify;
-    font-size: 1.1vw;
+    font-size: 15px;
+  }
 }

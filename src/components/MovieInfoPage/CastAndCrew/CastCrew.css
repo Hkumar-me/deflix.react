@@ -6,6 +6,8 @@
     font-size: 1.5vw;
     font-weight: 900;
     margin-bottom: 1.5vw;
+    width:fit-content ;
+    position: relative;
 }
 .castList{
     width: 100%;
@@ -35,4 +37,41 @@
     font-size: 1vw;
     font-weight: 300;
     color: rgba(225, 239, 251, 0.664);
+}
+
+
+@media (max-width:500px) {
+    .cast-crew h1{
+        font-size: 28px;
+        margin-bottom: 3vw;
+    }
+    .castList{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow: scroll;
+        gap: 25px;
+    }
+    .castList .cast{
+        flex-shrink: 0;
+    }
+    .castList .cast img{
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+    }
+    .castList .cast .castInfo h2{
+        font-size: 15px;
+        font-weight: 500;
+        color: rgb(225, 239, 251);
+    }
+    .castList .cast .castInfo h3{
+        font-size:13px;
+        font-weight: 300;
+        color: rgba(225, 239, 251, 0.664);
+    }
+    
 }

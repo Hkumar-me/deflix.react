@@ -1,9 +1,11 @@
 import React, { useRef, useState } from "react";
 import "./Contents.css";
 import { Link } from "react-router-dom";
+import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 function Contents() {
-
   const scrollSectionRef = useRef(null);
   const scrollSectionRef2 = useRef(null);
 
@@ -14,6 +16,7 @@ function Contents() {
     const sectionWidth = scrollSection.offsetWidth;
     setTranslation((prevTranslation) => prevTranslation - sectionWidth);
   };
+
   let sections = [
     {
       section_name: "Recommended for you",
@@ -78,7 +81,6 @@ function Contents() {
           rating: 7,
           poster: "batman.jpg",
         },
-       
       ],
     },
     {
@@ -113,7 +115,8 @@ function Contents() {
           name: "Batman",
           rating: 7,
           poster: "batman.jpg",
-        }, {
+        },
+        {
           name: "Godzilla",
           rating: 8,
           poster: "godzilla.jpg",
@@ -178,6 +181,21 @@ function Contents() {
           rating: 7,
           poster: "batman.jpg",
         },
+        {
+          name: "Intersteller",
+          rating: 9,
+          poster: "intersteller.jpg",
+        },
+        {
+          name: "Godzilla",
+          rating: 8,
+          poster: "godzilla.jpg",
+        },
+        {
+          name: "Batman",
+          rating: 7,
+          poster: "batman.jpg",
+        },
       ],
     },
   ];
@@ -187,65 +205,104 @@ function Contents() {
       {sections.map((element, index) => {
         return index === 1 ? (
           <div>
-            
-            <div className="section">
-              <h2>{element.section_name}</h2>
-              <div className="cards" >
-                {element.list.map((element) => {
-                  return ( <Link to={`/deflix.react/home/movies/${element.name}`} onClick={scrollToTop}>
-                    <div className="card" ref={scrollSectionRef}>
-                      <img src={`images/${element.poster}`} alt="" />
+          <h1 className="section_name underline-effects ">{element.section_name}</h1>
+            <Swiper
+              modules={[Navigation]}
+              slidesPerView={6}
+              spaceBetween={0}
+              
+              breakpoints={{
+                "@0.00": {
+                  slidesPerView: 2, // Set the number of slides per view for screen width less than 600px
+                },
+                "@0.75": {
+                  slidesPerView: 4, // Set the number of slides per view for screen width between 600px and 750px
+                },
+                "@1.00": {
+                  slidesPerView: 6, // Set the number of slides per view for screen width between 750px and 1000px
+                },
+                // Add more breakpoints as needed
+              }}
+              className="mySwiper"
+            >
+              {element.list.map((element) => {
+                return (
+                    <SwiperSlide slideClass="swiper-slide">
+                    <Link
+                      to={`/deflix.react/home/movies/${element.name}`}
+                      onClick={scrollToTop}
+                    >
+                      <div className="swiper-slide-content">
+                        <img src={`./images/${element.poster}`} alt="" />
+                        <div className="info">
+                          <h3>{element.name}</h3>
+                          <h4>{element.rating} / 10</h4>
+                        </div>
+                      </div>
+                  </Link>
+                    </SwiperSlide>
+                );
+              })}
+            </Swiper>
+            <div className="genres">
+              <h1 className="section_name underline-effects">Genres</h1>
+              <div className="genre">
+                {[
+                  "Bollywood",
+                  "Romance",
+                  "Adventure",
+                  "Thriller",
+                  "Fiction",
+                  "Comedy",
+                  "Scifi",
+                  "Fantasy",
+                ].map((element) => {
+                  return <a href="#">{element}</a>;
+                })}
+              </div>
+            </div>
+          </div>
+        ) : (
+          <>
+          <h1 className="section_name underline-effects">{element.section_name}</h1>
+            <Swiper
+              modules={[Navigation]}
+              slidesPerView={6}
+              spaceBetween={0}
+              breakpoints={{
+                "@0.00": {
+                  slidesPerView: 2, // Set the number of slides per view for screen width less than 600px
+                },
+                "@0.75": {
+                  slidesPerView: 4, // Set the number of slides per view for screen width between 600px and 750px
+                },
+                "@1.00": {
+                  slidesPerView: 6, // Set the number of slides per view for screen width between 750px and 1000px
+                },
+                // Add more breakpoints as needed
+              }}
+              className="mySwiper"
+            >
+              {element.list.map((element) => {
+                return (
+                  <SwiperSlide slideClass="swiper-slide">
+                  <Link
+                    to={`/deflix.react/home/movies/${element.name}`}
+                    onClick={scrollToTop}
+                  >
+                    <div className="swiper-slide-content">
+                      <img src={`./images/${element.poster}`} alt="poster" />
                       <div className="info">
                         <h3>{element.name}</h3>
                         <h4>{element.rating} / 10</h4>
                       </div>
                     </div>
-                    </Link> );
-                })}
-              </div>
-            </div>
-            <div className="genres">
-            <h1>Genres</h1>
-            <div className="genre">
-            {[
-              "Bollywood",
-              "Romance",
-              "Adventure",
-              "Thriller",
-              "Fiction",
-              "Comedy",
-              "Scifi",
-              "Fantasy"
-            ].map((element) => {
-              return <a href="#">{element}</a>;
-            })}
-            </div>
-            </div>
-          </div>
-        ) : (
-          
-          <div className="section">
-            <h2>{element.section_name}</h2>
-            <div className="cards">
-              {element.list.map((element) => {
-                return (
-                <Link to={`/deflix.react/home/movies/${element.name}` } onClick={scrollToTop}>
-                  <div className="card" ref={scrollSectionRef2} style={{ transform: `translateX(${translation}px)` }}>
-                    <img src={`images/${element.poster}` } alt="" />
-                    <div className="info">
-                      <h3>{element.name}</h3>
-                      <h4>{element.rating} / 10</h4>
-                    </div>
-                  </div>
-                  </Link>
-
+                </Link>
+                  </SwiperSlide>
                 );
               })}
-              
-            </div>
-            
-            <button onClick={handleScrollRight}>Scroll Right</button>
-          </div>
+            </Swiper>
+          </>
         );
       })}
     </div>
@@ -254,7 +311,7 @@ function Contents() {
 const scrollToTop = () => {
   window.scrollTo({
     top: 0,
-    behavior: 'instant'
-  })
-}
+    behavior: "instant",
+  });
+};
 export default Contents;

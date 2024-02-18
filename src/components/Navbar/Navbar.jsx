@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import Button from "../Buttons/Button";
 
 function Navbar() {
   let menuRef = useRef(null);
@@ -14,35 +15,32 @@ function Navbar() {
       flag = 0;
     }
   };
+
   return (
     <>
      
       <nav>
         <div className="nlogo">
-          <img src="images/logo.png" alt="logo" />
+          <img src="./images/logo.png" alt="logo" />
         </div>
         <div className="search">
           <input type="text" placeholder="Search" />
         </div>
         <h2 onClick={handleMenu} className="menuIcon">
-          Menu +
+          Menu+
         </h2>
         <div className="navLinks">
           {["Home", "Movies"].map((element, index) => {
             return (
               <Link id={index} to="/deflix.react/home">
-                {element}
+                <h2 className="link-hover-effects">{element}</h2>
               </Link>
             );
           })}
         </div>
         <div className="logBtns">
-          <a key="0" className="btn btn-signUp" href="#">
-            Sign Up
-          </a>
-          <a key="1" className="btn btn-signIn" href="#">
-            Sign In
-          </a>
+        <Button value="Sign Up"/>
+        <Button value="Sign In"/>
         </div>
         <div ref={menuRef} className="menu">
           <div className="menu-links">
@@ -50,14 +48,14 @@ function Navbar() {
           {["Home", "Movies"].map((element, index) => {
             return (
               <Link id={index}  to="/deflix.react/home">
-                <h2>{element}</h2>
+                <h2 >{element}</h2>
               </Link>
               
             );
           })}
           </div>
           <div className="menuBtns">
-            <button className="menuBtn upBtn">
+            <button className="menuBtn upBtn" >
               Sign Up
             </button>
             <button className="menuBtn inBtn">
