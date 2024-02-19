@@ -2,18 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+::selection {
+  background-color: #3498db; 
+  color: #fff;
+}
+
 .link-hover-effects{
     position: relative;
     width: fit-content;
-}
-.link-hover-effects::before {
-  content: "";
-  top: 100%;
-  position: absolute;
-  width: 0%;
-  height: 4px;
-  border-top: 1px solid #d3d3d3;
-  transition: all ease-in .3s;
 }
 .link-hover-effects::after {
   content: "";
@@ -22,12 +18,12 @@
   position: absolute;
   width: 0%;
   height: 4px;
-  border-bottom: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3af;
   transition: all ease-in .3s;
-}
-.link-hover-effects:hover::before{
-    width: 70%;
 }
 .link-hover-effects:hover::after{
     width: 100%;
+}
+.link-hover-effects:hover{
+  scale: 1.05;
 }

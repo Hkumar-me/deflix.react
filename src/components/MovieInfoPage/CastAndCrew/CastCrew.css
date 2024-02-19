@@ -9,17 +9,47 @@
     width:fit-content ;
     position: relative;
 }
+
+
+::-webkit-scrollbar {
+    height: 10px;
+    width: 0;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #b5b5b5;
+    border-radius: 50px; 
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #888;
+    cursor: pointer;
+  }
+  
+  ::-webkit-scrollbar-button {
+    display: none; 
+  }
+
+
+
 .castList{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    overflow-x: scroll;
+    gap: 40px;
 }
 .castList .cast{
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-shrink: 0;
 }
 .castList .cast img{
     width: 10vw;

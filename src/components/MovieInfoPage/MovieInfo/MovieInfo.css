@@ -8,6 +8,10 @@
   width: 100%;
   height: 100%;
 }
+::selection {
+  color: goldenrod;
+}
+
 .topInfo {
   margin-bottom: 3vw;
   width: 100%;
@@ -79,6 +83,7 @@
   justify-content: space-between;
   gap: 10px;
   overflow: scroll;
+  margin-top: 14px;
 }
 .reviews-container::-webkit-scrollbar{
   display: none;

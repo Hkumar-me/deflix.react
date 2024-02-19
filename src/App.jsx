@@ -6,7 +6,6 @@ import MovieInfo from "./components/MovieInfoPage/MovieInfo/MovieInfo";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-  let title = "dewaar"
   return (
     <>
       <Routes>

@@ -17,6 +17,6 @@
     position: absolute;
     left: 0%;
     top: 0;
-    transition: all ease-in .2s;
+    transition: all ease-in .4s;
     z-index: -1;
 }
