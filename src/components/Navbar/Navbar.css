@@ -2,7 +2,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content:space-between;
-    padding: 10px 20px;
+    padding: 1vw 4vw;
     overflow: hidden;
     width: 100%;
     background-color: #171717;
@@ -27,8 +27,8 @@ nav .menuIcon{
     width: 100%;
 }
 .search input{
-    width: 40vw;
-    height: 50px;
+    width: 50vw;
+    height: 40px;
     padding: 2px 15px;
     border-radius: 50px;
     background-color: #ffffff;

@@ -96,10 +96,7 @@
   flex-direction: column;
   justify-content: space-between;
   flex-shrink: 0;
-}
-.reviews h1 {
-  font-size: 1.5vw;
-  font-weight: 900;
+  background-color: #4d1515;
 }
 .reviewDiv {
   width: 100%;
@@ -178,19 +175,17 @@
 }
 .descrpition {
   width: 100%;
-  padding: 0.5vw 1vw;
   margin-bottom: 3vw;
 }
-.descrpition h1 {
-  font-size: 1.8vw;
-  font-weight: 900;
-  margin-bottom: 1vw;
-  position: relative;
-  width:fit-content ;
+.descrpition h1{
+  font-size: 1.5vw;
+  font-weight: 400;
 }
 .descrpition p {
   text-align: justify;
-  font-size: 1.1vw;
+  font-size: 15x;
+  font-weight: 100;
+
 }
 
 @media (max-width: 600px) {
@@ -279,8 +274,9 @@
     overflow: scroll;
   }
   .reviews h1 {
-    font-size: 28px;
-    font-weight: 900;
+    font-size: 0px;
+    font-weight: 500;
+    background-color: red;
   }
   .reviewDiv {
     width: 100%;

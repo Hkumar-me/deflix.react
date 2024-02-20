@@ -3,17 +3,9 @@
   min-height: 100vh;
   margin-top: 100px;
 }
-.section {
-  min-height: 45vh;
-}
-.section h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
 .mySwiper {
   width: 100%;
-  height: 50vh;
+  height: 40vh;
   position: relative;
   margin-bottom: 40px;
   border-bottom: 0.5px solid rgba(173, 167, 167, 0.795);
@@ -25,7 +17,7 @@
 .swiper-slide-content {
   width: 85%;
   background-color: #1e1e1e;
-  height: 85%;
+  height: 95%;
   border-top-right-radius: 40px;
   border-bottom-left-radius: 40px;
   border-top-left-radius: 10px;
@@ -34,19 +26,17 @@
   transition: all ease;
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(0%, -50%);
 }
 .swiper-slide-content:hover {
-  transform: scale(2.0095);
+  transform: scale(1.002);
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
   box-shadow: 5px 5px 10px 2px rgba(176, 176, 176, 0.1),
     -5px -5px 10px 2px rgba(176, 176, 176, 0.1),
     5px -5px 10px 2px rgba(176, 176, 176, 0.1),
     -5px 5px 10px 2px rgba(176, 176, 176, 0.1);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 .swiper-slide-content img {
   width: 100%;
@@ -72,10 +62,10 @@
 }
 .section_name {
   font-size: 1.5vw;
+  font-weight: 400;
   width: fit-content;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 2px;
+  margin-bottom: 2px;
   position: relative;
   cursor: pointer;
 }
@@ -85,17 +75,19 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 40px;
+  gap: 20px;
 }
 .genre a {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50px;
-  padding: 1.5vw 1.5vw;
+  padding: 1.2vw;
   width: fit-content;
   height: 50px;
-  font-size: 1.3vw;
+  font-size: 18px;
   background-color: #434343;
+  text-wrap: nowrap;
 }
 
 @media (max-width: 600px) {

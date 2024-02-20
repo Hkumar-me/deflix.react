@@ -1,54 +1,26 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
-    color: #fff;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  color: #fff;
 }
 
-html, body{
-    width: 100%;
+html,
+body {
+  width: 100%;
 }
-body{
-    background-color: #302F2F;
-    /* background-color: #fff; */
-}
-#main{
-    width: 100%;
-    padding: 0 30px;
+body {
+  background-color: #302f2f;
 }
 ::selection {
-    color: goldenrod;
-  }
-  
-.underline-effects{
-    position: relative;
-    width: fit-content;
-}
-.underline-effects::before {
-  content: "";
-  top: 100%;
-  position: absolute;
-  width: 80%;
-  height: 5px;
-  border-top: 1px solid #d3d3d3;
-}
-.underline-effects::after {
-  content: "";
-  top: 100%;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  height: 5px;
-  border-bottom: 1px solid #d3d3d3;
-  transition: all ease-in .3s;
+  color: goldenrod;
 }
 
 
 @media (max-width: 500px) {
-    #main{
-        padding:0px;
-        width: 100%;
-    }
-
+  #main {
+    padding: 0px;
+    width: 100%;
+  }
 }

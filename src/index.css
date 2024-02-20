@@ -6,24 +6,3 @@
   background-color: #3498db; 
   color: #fff;
 }
-
-.link-hover-effects{
-    position: relative;
-    width: fit-content;
-}
-.link-hover-effects::after {
-  content: "";
-  top: 100%;
-  left: 0;
-  position: absolute;
-  width: 0%;
-  height: 4px;
-  border-bottom: 1px solid #d3d3d3af;
-  transition: all ease-in .3s;
-}
-.link-hover-effects:hover::after{
-    width: 100%;
-}
-.link-hover-effects:hover{
-  scale: 1.05;
-}

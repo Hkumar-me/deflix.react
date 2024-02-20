@@ -155,14 +155,17 @@ function Contents() {
               <h1 className="section_name underline-effects">Genres</h1>
               <div className="genre">
                 {[
-                  "Bollywood",
-                  "Romance",
-                  "Adventure",
-                  "Thriller",
-                  "Fiction",
-                  "Comedy",
-                  "Scifi",
-                  "Fantasy",
+                 "Action",
+                 "Adventure",
+                 "Comedy",
+                 "Drama",
+                 "Horror",
+                 "Science Fiction",
+                 "Fantasy",
+                 "Romance",
+                 "Mystery",
+                 "Thriller",
+                 "Crime"
                 ].map((element) => {
                   return <a href="#">{element}</a>;
                 })}

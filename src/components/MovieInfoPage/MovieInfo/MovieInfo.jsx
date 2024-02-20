@@ -7,7 +7,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Description from "./Description";
 import Button from '../../Buttons/Button';
-
 function MovieInfo() {
 
   
@@ -131,19 +130,19 @@ function MovieInfo() {
           <div className="poster">
             <div className="img-container">
               <div className="posterOverlayInfo">
-                <h1>Deewar</h1>
+                <h1>Intersteller</h1>
                 <div className="releaseYear">
                   <h3>2004</h3>
                   <h3>2h 45min</h3>
                 </div>
                 <div className="genres">
-                  <h2>Drama</h2>
-                  <h2>Action</h2>
+                  <h2>Scifi</h2>
+                  <h2></h2>
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dolores itaque veniam eaque quas suscipit voluptas mollitia quibusdam sapiente obcaecati?</p>
               </div>
             <img
-              src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://images.squarespace-cdn.com/content/6058f3b0dbb27b03bbd36be9/1616442358485-73SWIOF44YZ8UO5QB6W0/interstellar.png?content-type=image%2Fpng"
               alt="poster"
             />
             </div>
@@ -153,8 +152,7 @@ function MovieInfo() {
             </div>
           </div>
           <div className="reviews">
-            <h1 className="underline-effects">Reviews</h1>
-            
+            <h1 className="section_name">Reviews</h1>
             <div className="reviews-container">
             {userReviews.map((element) => {
               return (
