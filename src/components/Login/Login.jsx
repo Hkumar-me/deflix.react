@@ -1,6 +1,7 @@
 import React from "react";
 import "./Login.css";
 import Button from "../Buttons/Button";
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
   return (
@@ -14,8 +15,8 @@ const Login = () => {
               <input type="password" placeholder="Password" />
             </div>
             <div className="rem-pass flex ">
-              <div className="flex items-center justify-center">
-                <input type="checkbox" name="rememberMe" />
+              <div className="flex items-center justify-center gap-[5px]">
+                <input type="checkbox" name="rememberMe" className="checkbox" />
                 <label htmlFor="rememberMe" className="text-black font-normal">Remember me</label>
               </div>
               <h2 className="font-bold text-black underline cursor-pointer">Forgot Password?</h2>
@@ -28,12 +29,14 @@ const Login = () => {
             <div className="lb-part1">
               <p className="text-black font-normal">Or sign in with</p>
               <div className="login-options">
-                <a href="#"><img src="./images/googleLogo.png" alt="" width="200px"/></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
               </div>
             </div>
             <div className="lb-part2">
-              <h2 className="text-black font-normal">First Time Here?</h2>
-              <h2 className="font-bold text-black underline cursor-pointer">Create Account</h2>
+              <h2 className="text-black font-normal text-nowrap">First Time Here?</h2>
+              <h2 className="font-bold text-black underline cursor-pointer text-nowrap">Create Account</h2>
             </div>
           </div>
         </div>

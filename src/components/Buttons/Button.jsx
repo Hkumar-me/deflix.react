@@ -6,16 +6,16 @@ function Button({value}) {
   let btnRef = useRef(null);
 
   function handleBtnHoverOnE() {
-   btnRef.current.style.color = '#fff';
-   btnRef.current.style.setProperty('--before-width', '100%')
+   btnRef.current.style.color = '#FE5B4A';
+   btnRef.current.style.setProperty('--before-opacity', 1)
   }
 
   function handleBtnHoverOnL() {
-   btnRef.current.style.color = '#171717';
-   btnRef.current.style.setProperty('--before-width', '0%')
+   btnRef.current.style.color = '#fff';
+   btnRef.current.style.setProperty('--before-opacity', 0)
   }
 
-  let [btnStyle, setBtnStyle] = useState({});
+  // let [btnStyle, setBtnStyle] = useState({});
 
 
 
@@ -27,10 +27,9 @@ function Button({value}) {
         style={{
           width: "fit-content",
           padding: "10px 20px",
-          backgroundColor: "#fff",
-          color: "#171717",
-          borderRadius:"50px",
-          border:"2px solid white"
+          backgroundColor: "#FE5B4A",
+          color: "#fff",
+          borderRadius:"50px"
 
 
         }}

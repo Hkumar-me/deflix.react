@@ -8,15 +8,13 @@
 
 .button::before{
     content:"";
-    width: var(--before-width, 0%);
-    /* width: 0%; */
-    /* opacity: var(--before-opacity, 0); */
-    /* scale: var(--scale, 0); */
+    width: var(--before-width, 100%);
+    opacity: var(--before-opacity, 0);
     height: 100%;
-    background-color: #171717;
+    background-color: #efe9e8;
     position: absolute;
     left: 0%;
-    top: 0;
-    transition: all ease-in .4s;
+    top: 0%;
+    transition: all ease-in .1s;
     z-index: -1;
 }
